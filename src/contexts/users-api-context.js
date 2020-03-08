@@ -42,7 +42,7 @@ function useSetUsersApi() {
   return context;
 }
 
-async function updateUsers(dispatch, updates) {
+async function fetchUsersFromApi(dispatch, updates) {
   dispatch(updates);
   try {
     let updatedUsers = await fetch('https://reqres.in/api/users?page=2');
@@ -54,4 +54,9 @@ async function updateUsers(dispatch, updates) {
   }
 }
 
-export { UsersApiContextProvider, useUsersApi, useSetUsersApi, updateUsers };
+export {
+  UsersApiContextProvider,
+  useUsersApi,
+  useSetUsersApi,
+  fetchUsersFromApi,
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  updateUsers,
+  fetchUsersFromApi,
   useSetUsersApi,
   useUsersApi,
 } from '../contexts/users-api-context';
@@ -11,7 +11,7 @@ function ShowUsers() {
   const setUsersApiFun = useSetUsersApi();
 
   function handleApi() {
-    updateUsers(setUsersApiFun, users);
+    fetchUsersFromApi(setUsersApiFun, users);
   }
 
   return (
