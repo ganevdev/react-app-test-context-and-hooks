@@ -1,9 +1,13 @@
 import React from 'react';
 
-function ShowText({ text = '' }) {
+import { useTextState } from '../contexts/text-context';
+
+function ShowText() {
+  const text = useTextState();
+
   return (
     <div>
-      <h2>{text}</h2>
+      <h2>текст: {text}</h2>
     </div>
   );
 }

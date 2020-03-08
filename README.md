@@ -1,5 +1,5 @@
-# Create React App Ganevru
+# react-app-test-context-and-hooks
 
-More about templates: https://create-react-app.dev/docs/custom-templates
+По статье: https://kentcdodds.com/blog/how-to-use-react-context-effectively
 
-Repo: https://github.com/ganevru/cra-template-ganevru#readme
+И по: https://kentcdodds.com/blog/application-state-management-with-react

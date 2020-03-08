@@ -1,19 +1,20 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import InputText from '../components/InputText';
 import ShowText from '../components/ShowText';
+import { TextContextProvider } from '../contexts/text-context';
 
 function App() {
-  const [textForInput, setTextForInput] = useState('');
-
   return (
-    <main>
-      <h1>тестирование передачи хуков/состояний вниз</h1>
-      <InputText />
-      <ShowText text={textForInput} />
-    </main>
+    <TextContextProvider>
+      <main>
+        <h1>тестирование передачи хуков/состояний вниз</h1>
+        <InputText />
+        <ShowText />
+      </main>
+    </TextContextProvider>
   );
 }
 

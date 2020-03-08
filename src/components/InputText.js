@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import { useInputTextFun, useTextState } from '../contexts/text-context';
 
 function InputText() {
-  const [text, setText] = useState('');
-
-  const inputTextFun = (e) => setText(e.target.value);
+  const inputTextFun = useInputTextFun();
+  const text = useTextState();
 
   return (
     <div>
